@@ -6,7 +6,7 @@
 html,
 body {
     height: 100%;
-    font-family: 'Arial MT', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 .container {
@@ -15,17 +15,16 @@ body {
     min-height: 100%;
 }
 
-.header {
-    min-height: 323px;
+header {
     background-color: #445162;
-    padding: 50px 50px 0 50px;
+    padding: 50px;
     box-sizing: border-box;
 }
 
-.product {
-    display: flex;
-    flex-direction: column;
-    float: left;
+header:after {
+  content: '';
+  clear: both;
+  display: block;
 }
 
 h1 {
@@ -34,6 +33,7 @@ h1 {
     color: #ffffff;
     font-size: 60px;
     font-weight: 400;
+    float: left;
 }
 
 .header-list {
@@ -44,6 +44,7 @@ h1 {
     font-weight: 400;
     line-height: 36px;
     margin-top: 51px;
+    float: left;
 }
 
 .header-img {
@@ -90,9 +91,9 @@ article {
 }
 
 .dignity-and-pluses {
-    height: 400px;
+    height: 100%;
     background-color: #f5f5f5;
-    padding: 50px 50px 0 50px;
+    padding: 50px 0;
     box-sizing: border-box;
 }
 
@@ -105,11 +106,10 @@ article {
     margin-bottom: 29px;
 }
 
-.pluses {   
-    height: 100%;
+.pluses {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    margin-left: 50px;
 }
 
 .plus-marker {
@@ -123,6 +123,7 @@ article {
 }
 
 .plus-desc {
+    max-width: 527px;
     margin-left: 41px;
     color: #333333;
     font-size: 16px;
@@ -131,18 +132,22 @@ article {
 }
 
 .plus {
-    max-width: 49%;
-    margin-bottom: 35px;
+    margin-top: 35px;
     margin-right: 29px;
 }
 
+.plus:nth-child(-n+2) {
+    margin-top: 0;
+}
+
 .screenshots {
-    height: 487px;
-    padding: 50px 50px 0 50px;
+    height: 100%;
+    padding: 50px 0;
     box-sizing: border-box;
 }
 
 .screenshots h3 {
+    margin-bottom: 30px;
     color: #445161;
     font-size: 30px;
     font-weight: 400;
@@ -151,15 +156,20 @@ article {
 }
 
 .screenshots-content {
-    height: 100%;
-    margin-top: 35px;
+    margin-left: 50px;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
 }
 
 .screen {
-    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.screen:nth-child(-n+2) {
+    margin-top: 0;
+}
+
+.screen:nth-child(odd) {
     margin-right: 16px;
 }
 
@@ -171,8 +181,8 @@ article {
 }
 
 .screen-desc {
-    margin-left: 215px;        
-    max-width: 349px;
+    margin-left: 215px;
+    max-width: 359px;
 }
 
 .screen-desc h4 {
@@ -190,9 +200,9 @@ article {
 }
 
 .reviews {
-    height: 425px;
+    height: 100%;
     background-color: #f5f5f5;
-    padding: 50px 50px 0 50px;
+    padding: 50px 0;
     box-sizing: border-box;
 }
 
@@ -205,15 +215,20 @@ article {
 }
 
 .reviews-content {
-    height: 100%;
-    margin-top: 35px;
+    margin: 35px 0 0 50px;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
 }
 
 .review {
-    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+.review:nth-child(-n+2) {
+    margin-top: 0;
+}
+
+.review:nth-child(odd) {
     margin-right: 32px;
 }
 
@@ -226,7 +241,9 @@ article {
 }
 
 .review-desc {
-    background: url(../images/bg_review.png);
+    position: relative;
+    background: #ebebeb;
+    border-radius: 5px;
     margin-left: 91px;
     padding: 16px 20px 16px 27px;
     color: #333333;
@@ -238,6 +255,17 @@ article {
     max-width: 483px;
 }
 
+.review-desc::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -10px;
+    top: 27px;
+    background: #ebebeb;
+    transform: rotate(45deg);
+}
+
 .reviewer-name {
     margin-top: 15px;
     color: #989898;
@@ -245,7 +273,6 @@ article {
     font-weight: 400;
     line-height: 14px;
     font-style: normal;
-    
 }
 
 .buy-it-now {
@@ -269,9 +296,7 @@ article {
     align-items: flex-end;       
 }
 
-.standart,
-.premium,
-.lux {
+.option-unit {
     width: 300px;
     background-color: #445161;
     padding-top: 16px;
@@ -322,6 +347,7 @@ article {
     margin: 19px 20px;
     border: none;
     border-radius: 5px;
+    background-color: #fff;
 }
 
 .option-buy:hover {
@@ -330,7 +356,6 @@ article {
 }
 
 .contacts {
-    height: 509px;
     background-color: #445162;
     padding: 50px 246px 50px 249px;
     box-sizing: border-box;
@@ -375,6 +400,7 @@ article {
 .form-messege {
     height: 170px;
     padding-top: 13px;
+    font-family: 'Arial MT', sans-serif;
 }
 
 .form-submit {
@@ -433,7 +459,7 @@ article {
 .footer {
     min-height: 26px;
     background-color: #f5f5f5;
-    width: 1280px;
+    max-width: 1280px;
     margin: -26px auto 0;
 }
 
@@ -444,6 +470,193 @@ article {
     line-height: 12px;
     text-align: center;
     padding-top: 7px;
+}
+
+@media screen and (max-width:1040px){    
+    header {
+        display: flex;
+        align-items: center
+    }  
+    
+    .header-img {
+        margin-top: 50px;
+    }
+    
+    header,
+    article {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    h1,
+    .about-product h3{
+        text-align: center;
+    }
+    
+    .about-img {
+        margin-top: 50px;
+    }   
+    
+}
+
+@media screen and (max-width:590px){
+    .header-img {
+        width: 300px
+    }
+}
+
+@media screen and (max-width:1260px){
+    .plus {
+        max-width: 45%;
+        margin-right: 3%;
+    }
+}
+
+@media screen and (max-width:750px){
+    .plus {
+        max-width: 100%;
+    }
+    
+    .plus:nth-child(2) {
+    margin-top: 35px;
+    }
+    
+    .pluses {
+        margin: 0 20px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:1260px){
+    .screen {
+        max-width: 45%;
+        margin-right: 3%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .screen {
+        max-width: 100%;
+    }
+    
+    .screen:nth-child(2) {
+    margin-top: 30px;
+    }
+    
+    .screenshots-content {
+        margin: 0 20px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:500px){
+    .screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .screen-desc {
+        margin: 20px 0 0 0 ;
+        text-align: center;
+    }
+    
+    .screen {
+        margin: 0 20px 20px;
+    }
+}
+
+@media screen and (max-width:1250px){
+    .review {
+        max-width: 45%;
+        margin-right: 3%;
+    }
+}
+
+@media screen and (max-width:900px){
+    .review:nth-child(n+1) {
+        max-width: 100%;
+        margin-right: 0;
+    }
+    
+    .review:nth-child(2) {
+    margin-top: 24px;
+    }
+    
+    .reviews-content {
+        margin: 0 20px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:1210px){
+    .buy-it-now {
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width:1020px){    
+    .options {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .option-unit {
+        margin-bottom: 30px;
+    }
+    
+    .option-unit:first-child {
+        margin-right: 30px;
+    }
+} 
+
+@media screen and (max-width:747px){
+    .option-unit:first-child {
+        margin-right: 0;
+    }
+    
+    .options {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
+
+@media screen and (max-width:1265px) {
+    .contacts {
+        padding:50px 50px 50px 50px;
+    }
+}
+
+@media screen and (max-width:870px) {
+    .contacts-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contacts-form {
+        margin-bottom: 30px;
+    }
+    
+    .social {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:570px) {    
+    .form-name,
+    .form-email,
+    .form-messege {
+    width: 350px;
+    }
+}
+
+@media screen and (max-width:400px) {    
+    .form-name,
+    .form-email,
+    .form-messege {
+    width: 300px;
+    }
 }
 
 /*почему параграфы ниже*/
