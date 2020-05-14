@@ -16,8 +16,7 @@
 
             <h1>Product name</h1>
 
-
-            <figure class="header-img"></figure>
+            <video src="video/view-of-rocky-mountains.mp4" controls class="header-img"></video>
 
             <ul class="header-list">
                 <li>Put on this page information about your product</li>
@@ -136,7 +135,9 @@
 
                         <div class="screen">
 
-                            <div class="screen-picture"></div>
+                            <div class="screen-picture">
+                                <img src="images/mounain_lake.jpg" alt="mounain_lake">
+                            </div>
 
                             <div class="screen-desc">
 
@@ -151,7 +152,9 @@
 
                         <div class="screen">
 
-                            <div class="screen-picture"></div>
+                            <div class="screen-picture">
+                                <img src="images/mounain_lake_2.jpg" alt="mounain_lake2">
+                            </div>
 
                             <div class="screen-desc">
 
@@ -166,7 +169,9 @@
 
                         <div class="screen">
 
-                            <div class="screen-picture"></div>
+                            <div class="screen-picture">
+                                <img src="images/mounain_lake_3.jpg" alt="mounain_lake3">
+                            </div>
 
                             <div class="screen-desc">
 
@@ -181,7 +186,9 @@
 
                         <div class="screen">
 
-                            <div class="screen-picture"></div>
+                            <div class="screen-picture">
+                                <img src="images/mounain_lake_4.jpg" alt="mounain_lake4">
+                            </div>
 
                             <div class="screen-desc">
 
@@ -208,7 +215,9 @@
 
                     <div class="review">
 
-                        <div class="review-picture"></div>
+                        <div class="review-picture">
+                            <img src="images/Bill%20Geits.jpg" alt="Bill Geits">
+                        </div>
 
                         <div class="review-desc">
 
@@ -224,7 +233,9 @@
 
                     <div class="review">
 
-                        <div class="review-picture"></div>
+                        <div class="review-picture">
+                            <img src="images/Mark%20Tsukerberg.jpeg" alt=" Mark Tsukerberg">
+                        </div>
 
                         <div class="review-desc">
 
@@ -240,7 +251,9 @@
 
                     <div class="review">
 
-                        <div class="review-picture"></div>
+                        <div class="review-picture">
+                            <img src="images/Ilin%20Mask.jpg" alt="Ilon Mask">
+                        </div>
 
                         <div class="review-desc">
 
@@ -256,7 +269,9 @@
 
                     <div class="review">
 
-                        <div class="review-picture"></div>
+                        <div class="review-picture">
+                            <img src="images/Steve%20Jobs.jpg" alt="Steve Jobs">
+                        </div>
 
                         <div class="review-desc">
 
@@ -347,39 +362,43 @@
             <div class="contacts-content">
 
                 <form action="#" class="contacts-form">
-                    <input type="text" placeholder="Your name:" class="form-name">
-                    <input type="email" placeholder="Your email:" class="form-email">
+                    <input type="text" placeholder="Your name: Alexandr" class="form-name" pattern="^[A-Za-z\s]+$">
+                    <input type="email" placeholder="Your email: example_1@random-domen.com" class="form-email" pattern="^([A-Za-z0-9\.-_]+)(@)([A-Za-z0-9\.-_]+)(\.)([A-Za-z0-9\.-_]{2,})$">
                     <textarea placeholder="Your message:" class="form-messege"></textarea>
-                    <input type="submit" value="Send" class="form-submit">
+                    <div class="buttons">
+                        <input type="submit" value="Send" class="form-submit">
+                        <input type="reset" value="Reset" class="form-reset">
+                    </div>
+                    
                 </form>
 
-                <address class="social-list">  
-                                   
-                   <div class="social">                       
-                       <img src="images/skype_icon.png" alt="skype" class="social-icon"> 
-                       <p>here_your_login_skype</p>                       
-                   </div>
-                   
-                   <div class="social">                       
-                       <img src="images/icq_icon.png" alt="icq" class="social-icon">
-                       <p>279679659</p>                       
-                   </div>
-                   
-                   <div class="social">                       
-                       <img src="images/email_icon.png" alt="email" class="social-icon"> 
-                       <p>psdhtmlcss@mail.ru</p>                       
-                   </div>
-                   
-                   <div class="social">                       
-                       <img src="images/phone_icon.png" alt="phone" class="social-icon">
-                       <p>80 00 4568 55 55</p>                       
-                   </div>
-                   
-                   <div class="another">                   
-                   <img src="images/social_buttons.png" alt="social buttons">  
-                   </div>
-                   
-               </address>
+                <address class="social-list">
+
+                    <div class="social">
+                        <img src="images/skype_icon.png" alt="skype" class="social-icon">
+                        <p>here_your_login_skype</p>
+                    </div>
+
+                    <div class="social">
+                        <img src="images/icq_icon.png" alt="icq" class="social-icon">
+                        <p>279679659</p>
+                    </div>
+
+                    <div class="social">
+                        <img src="images/email_icon.png" alt="email" class="social-icon">
+                        <p>psdhtmlcss@mail.ru</p>
+                    </div>
+
+                    <div class="social">
+                        <img src="images/phone_icon.png" alt="phone" class="social-icon">
+                        <p>80 00 4568 55 55</p>
+                    </div>
+
+                    <div class="another">
+                        <img src="images/social_buttons.png" alt="social buttons">
+                    </div>
+
+                </address>
 
             </div>
 

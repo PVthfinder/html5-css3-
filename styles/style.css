@@ -51,7 +51,9 @@ h1 {
     width: 469px;
     height: 214px;
     background-color: #ffffff;
-    float: right
+    float: right;
+    object-fit: cover;
+    background-position: center;
 }
 
 article {    
@@ -87,7 +89,9 @@ article {
 .about-img {
     width: 430px;
     height: 245px;
-    background-color: #445161;
+    background: url(../images/mounain_lake_house.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .dignity-and-pluses {
@@ -180,6 +184,12 @@ article {
     float: left;
 }
 
+.screen-picture img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .screen-desc {
     margin-left: 215px;
     max-width: 359px;
@@ -238,6 +248,13 @@ article {
     background-color: #445161;
     border-radius: 75px;
     float: left;
+}
+
+.review-picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 75px;
 }
 
 .review-desc {
@@ -397,13 +414,19 @@ article {
     margin-bottom: 21px;
 }
 
+.form-name:invalid,
+.form-email:invalid {
+    background-color: #FB3F51;
+}
+
 .form-messege {
     height: 170px;
     padding-top: 13px;
-    font-family: 'Arial MT', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
-.form-submit {
+.form-submit,
+.form-reset {
     color: #445162;
     font-size: 16px;
     font-weight: 600;
@@ -414,6 +437,17 @@ article {
     background-color: #ffffff;
     border: none;
     border-radius: 5px;
+}
+
+.buttons {
+    width: 70%;
+}
+.form-submit {
+    float: left;
+}
+
+.form-reset {
+    float: right;
 }
 
 .social-list {
@@ -442,6 +476,11 @@ article {
 .form-submit:hover {
     cursor: pointer;
     background-color: #ccc;
+}
+
+.form-reset:hover {
+    cursor: pointer;
+    background-color: #FB3F51;
 }
 
 .form-name:focus,
@@ -475,14 +514,15 @@ article {
 @media screen and (max-width:1040px){    
     header {
         display: flex;
-        align-items: center
+        flex-direction: column;
+        align-items: center;
     }  
     
     .header-img {
+        width: 70%;
         margin-top: 50px;
     }
     
-    header,
     article {
         flex-wrap: wrap;
         justify-content: center;
@@ -501,7 +541,16 @@ article {
 
 @media screen and (max-width:590px){
     .header-img {
-        width: 300px
+        width: 300px;
+        margin-top: 25px;
+    }
+    
+    h1 {
+    font-size: 40px;
+    }
+    
+    .header-list {
+        margin-top: 25px;
     }
 }
 
@@ -580,12 +629,29 @@ article {
     }
     
     .review:nth-child(2) {
-    margin-top: 24px;
+        margin-top: 24px;
     }
     
     .reviews-content {
         margin: 0 20px;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width:500px){
+    .review {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .review-desc {
+        margin: 20px 0 0;
+    }
+    
+    .review-desc::before {
+        top: -10px;
+        left: 47%;
     }
 }
 
@@ -619,11 +685,15 @@ article {
         flex-direction: column;
         align-items: center;
     }
+    
+    .buy-it-now {
+        padding: 50px 0;
+    }
 } 
 
 @media screen and (max-width:1265px) {
     .contacts {
-        padding:50px 50px 50px 50px;
+        padding:50px;
     }
 }
 
@@ -646,7 +716,8 @@ article {
 @media screen and (max-width:570px) {    
     .form-name,
     .form-email,
-    .form-messege {
+    .form-messege,
+    .buttons{
     width: 350px;
     }
 }
@@ -658,5 +729,3 @@ article {
     width: 300px;
     }
 }
-
-/*почему параграфы ниже*/
