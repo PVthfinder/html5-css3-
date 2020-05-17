@@ -89,8 +89,7 @@ article {
 .about-img {
     width: 430px;
     height: 245px;
-    background: url(../images/mounain_lake_house.jpg);
-    background-position: center;
+    background: url(../images/mounain_lake_house.jpg) center;
     background-size: cover;
 }
 
@@ -519,7 +518,7 @@ article {
     }  
     
     .header-img {
-        width: 70%;
+        width: 100%;
         margin-top: 50px;
     }
     
@@ -725,7 +724,12 @@ article {
 @media screen and (max-width:400px) {    
     .form-name,
     .form-email,
-    .form-messege {
+    .form-messege,
+    .buttons{
     width: 300px;
+    }
+    
+    .social {
+        justify-content:flex-start;
     }
 }
